@@ -1,9 +1,11 @@
 package com.br.e.commerce;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+@EnableAutoConfiguration
 public class CustomerApplication {
 
   public static void main(String[] args) {
