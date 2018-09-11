@@ -2,6 +2,7 @@ package com.br.e.commerce.usecase;
 
 import com.br.e.commerce.domain.Customer;
 import com.br.e.commerce.gateway.CustomerGateway;
+import com.br.e.commerce.gateway.http.exception.CustomerNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +18,7 @@ public class CrudCustomer {
 
   public Customer findCustomer(final String cpf){
     return customerGateway.findCustomerByCpf(cpf)
-        .orElseThrow(() -> new RuntimeException("Nao achou customer")); //TODO criar uma exception
+        .orElseThrow(() -> new CustomerNotFoundException(String.format("Customer not found with document number: %s", cpf)));
   }
 
 }

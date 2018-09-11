@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -33,7 +31,7 @@ public class CustomerController {
   }
 
   @GetMapping("/{cpf}")
-  public CustomerJson findCustomer(@PathVariable(name = "cpf") final String cpf){
+  public CustomerJson find(@PathVariable(name = "cpf") final String cpf){
     final Customer customer = crudCustomer.findCustomer(cpf);
     return customerToCustomerJsonConverter.convert(customer);
   }
