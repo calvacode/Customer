@@ -7,8 +7,11 @@ import lombok.Data;
 @Builder
 public class Customer {
 
+  private String cpf;
+
   private String name;
 
   private String lastName;
+
 
 }

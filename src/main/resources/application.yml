@@ -1,4 +1,4 @@
 spring:
   data:
     mongodb:
-      uri: 'mongodb+srv://douglascavalcante:semsenha@customer-22vc0.mongodb.net/test?retryWrites=true'
+      uri: 'mongodb+srv://douglascavalcante:BunBohelistyet6@customer-22vc0.mongodb.net/customer?retryWrites=true'

@@ -15,4 +15,9 @@ public class CrudCustomer {
     customerGateway.create(customer);
   }
 
+  public Customer findCustomer(final String cpf){
+    return customerGateway.findCustomerByCpf(cpf)
+        .orElseThrow(() -> new RuntimeException("Nao achou customer")); //TODO criar uma exception
+  }
+
 }
