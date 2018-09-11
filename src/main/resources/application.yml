@@ -1,7 +1,4 @@
 spring:
   data:
-    #mongodb: 'mongodb+srv://douglascavalcante:semsenha@customer-22vc0.mongodb.net/test?retryWrites=true'
     mongodb:
-      database: delivery
-      host: local
-      port: 27017
+      uri: 'mongodb+srv://douglascavalcante:semsenha@customer-22vc0.mongodb.net/test?retryWrites=true'

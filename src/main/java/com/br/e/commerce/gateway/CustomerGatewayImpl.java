@@ -3,7 +3,9 @@ package com.br.e.commerce.gateway;
 import com.br.e.commerce.domain.Customer;
 import com.br.e.commerce.gateway.mongo.CustomerRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
+@Component
 @RequiredArgsConstructor
 public class CustomerGatewayImpl implements CustomerGateway{
 
